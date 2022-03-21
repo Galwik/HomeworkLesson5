@@ -15,7 +15,7 @@ public class MovieLibrary {
     }
 
     public void searchMovieByDate(int start, int end) {
-        System.out.println("Your movies are:");
+        System.out.println("Your movies:");
         for (Movie movie : movies) {
             if (movie.getDate() >= start && movie.getDate() <= end) {
                 System.out.println(movie);
@@ -29,7 +29,7 @@ public class MovieLibrary {
     }
 
     public void searchMovieByActorName(Actor actor) {
-        System.out.println("Your movies are:");
+        System.out.println("Your movies:");
         movies.stream()
                 .filter(m -> m.getActors().stream()
                         .anyMatch(
